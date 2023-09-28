@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Informe de Airbnb</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f2f2f2;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        li:hover {
+            background-color: #f9f9f9;
+        }
+        h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informe de Airbnb</h1>
+
+    <form action="/" method="GET" style="text-align: center; margin-bottom: 20px;">
+        <input type="text" name="site_name" placeholder="Nombre del sitio" style="padding: 5px; border-radius: 5px; border: 1px solid #ddd; margin-right: 10px;">
+        <input type="submit" value="Buscar" style="padding: 5px 10px; border-radius: 5px; border: none; background-color: #009688; color: #fff; cursor: pointer;">
+    </form>
+
+    <ul style="list-style-type: none; padding: 0;">
+        {% for listing in airbnb_data %}
+        <li style="background-color: #fff; border: 1px solid #ddd; margin-bottom: 10px; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-size: 20px; color: #333; margin-bottom: 5px;">{{ listing.title }}</h2>
+            <p style="color: #666; margin-bottom: 10px;"><strong>Distancia o Fecha:</strong> {{ listing.distance }}</p>
+            <p style="color: #009688; margin-bottom: 10px;"><strong>Valor:</strong> {{ listing.price }}</p>
+            <p style="font-size: 16px; color: #333;"><strong>Calificación Promedio:</strong> {{ listing.rating }} <strong> de 5</strong></p>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
