@@ -1,6 +1,8 @@
 # Proyecto de Informe de Airbnb
 
-Este proyecto es una aplicación web que muestra información de Airbnb. Permite buscar sitios por nombre y mostrar detalles como distancia, valor y calificación.
+Este proyecto es una aplicación web que muestra información obtenida del sitio Airbnb, en donde permite buscar los alojamientos por nombre y mostrar detalles como distancia, valor y calificación.
+
+![img.png](Images/Diagrama.png)
 
 ## Requisitos
 
